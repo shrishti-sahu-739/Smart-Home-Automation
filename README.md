@@ -30,12 +30,12 @@ This project was developed for educational purposes. Database setup may be requi
 ## Project Screenshots
 
 ### Home Page
-![Home Page](Screenshots/Screenshot(11).png)
+![Home Page](Screenshots/Screenshot (11).png)
 
 ### Device Control
-![Device Control](Screenshots/Screenshot(14).png)
+![Device Control](Screenshots/Screenshot (14).png)
 
 
 ###Lighting Page
-![Lighting Page](Screenshots/Screenshot(12).png)
+![Lighting Page](Screenshots/Screenshot (12).png)
 
