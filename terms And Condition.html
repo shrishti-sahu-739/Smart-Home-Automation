@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Terms & Conditions</title>
+    <style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    body{
+    background-color: #f9f7f1;
+    }
+ .navbar {
+  border: 2px solid #FF9933;
+  padding: 30px 24px;
+  background-color: #FAF9F8;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between; /* left → title, middle → list, right → phone */
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: #FF9933;
+  font-weight: bold;
+  font-family: serif;
+}
+
+
+.navbar .list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+ .navbar .list a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #7D7D7D;
+  font-family: serif;
+  transition: color 0.3s ease;
+}
+
+.list a:hover {
+  color: #FF9933;
+}
+
+.phone-icon a {
+  text-decoration: none;
+  color: #FF9933;
+  /* font-weight: 900; */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+   gap: 8px;
+}
+.phone-icon a:hover{
+  text-decoration: none;
+}
+
+.phone-icon .material-icons {
+  font-size: 22px;
+  color:#FF9933;
+}
+.content{
+    display: flex;
+}
+.content p{
+    font-size: 50px;
+    font-style: italic;
+    color: #FF9933;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-bottom: 180px;
+}
+.line{
+  width: 70%;
+  height: 2px;
+  background-color: #FF9933;
+  margin-top: 110px;
+  margin-left: 1.5rem;
+}  
+.head{
+   margin-left: 50px;
+    font-size:24px;
+    color: #333333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.para{
+    font-size:21px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+}     
+.footer{
+  height: 350px;
+  background-color:#ffe1c44d;
+  margin-top:50px;
+  display: flex;
+  justify-content: space-around;
+}
+ul{
+  list-style: none;
+}
+.logo{
+  margin-top:5%;
+  font-size:30px;
+  color: #FF9933;
+}
+.foot1 ,
+.foot2 ,
+.foot3 {
+ margin-top: 5%;
+
+}
+
+h3{
+  font-size: 20px;
+}
+a{
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+  font-size: 20px;
+  color: #7D7D7D;
+ 
+}
+a:hover{
+  color: #FF9933;
+  text-decoration: underline;
+}
+
+.imge{
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.1rem;
+}
+.copyright{
+    margin-top: 1rem;
+    color: #7D7D7D;
+    font-size:20px;
+
+}
+.copyright p{
+  font-size:18px;
+}
+.foot1 ul,
+.foot2 ul,
+.foot3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* automatic space between links */
+}
+  /* DropDown */
+.sub-menu{
+  display: none;
+}
+.navbar ul li {
+  position: relative;
+  color: #FF9933;
+  
+}
+
+.navbar ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  width:250px;
+  top: 100%; /* place directly below parent */
+  left: 0;   /* align perfectly with parent */
+  background-color: #fdf1e5;
+  border-radius: 10px;
+  z-index: 999;
+  margin: 0; /* remove the gap that breaks hover */
+  padding: 5px 10px;
+}
+
+
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul li{
+  display: block;
+  margin: 20px;
+  border-radius: 0px;
+  text-align: left;
+  
+}
+
+.navbar ul li:hover .sub-menu ul li :last-child{
+  border-bottom: none;
+}
+
+.navbar ul li:hover .sub-menu ul li a:hover{
+ color:#FF9933;
+}
+  
+  
+  </style>
+</head>
+<body>
+    
+       <!-- FOR NAVBAR -->
+  <nav class="navbar">
+    <div class="title">SmartHive</div>
+    <ul class="list">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a>
+      
+        <div class="sub-menu">
+        <ul>
+          <li><a href="Products.html">Smart Lighting</a></li>
+          <li><a href="Smart-Fans.html">Smart Fans</a></li>
+          <li><a href="switches.html">Smart Switches</a></li>
+          <li><a href="Smart-AC.html">Smart A.C</a></li>
+
+        </ul>
+ </div>
+    </li>
+      <li><a href="pra.html">Catalogue</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+      <li><a href="Device.php">Device Control</a></li>
+
+    </ul>
+    <div class="phone-icon">
+      <a href="#" id="phone">
+        <span class="material-icons">call</span>+91 94244 40489
+      </a>
+   </div>
+</nav> 
+
+<!-- FOR FIRST SECTION -->
+ <div class="content">
+    <p>Terms & Conditions</p>
+    <div class="line"></div>
+ </div>
+
+ <!-- FOR SECOND SECTION -->
+  <h4 class="head">Terms & Conditions</h4>
+  <p class="para">These terms and conditions apply to the Pert Pro app (hereby referred to as "Application") for mobile devices that was created by Pert Infoconsulting Pvt Ltd (hereby referred to as "Service Provider") as a Free service. <br><br>
+Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is strongly advised that you thoroughly read and understand these terms prior to using the Application. Unauthorized copying, modification of the Application, any part of the Application, or our trademarks is strictly prohibited. Any attempts to extract the source code of the Application, translate the Application into other languages, or create derivative versions are not permitted. All trademarks, copyrights, database rights, and other intellectual property rights related to the Application remain the property of the Service Provider. <br><br>
+The Service Provider is dedicated to ensuring that the Application is as beneficial and efficient as possible. As such, they reserve the right to modify the Application or charge for their services at any time and for any reason. The Service Provider assures you that any charges for the Application or its services will be clearly communicated to you. <br> <br>
+The Application stores and processes personal data that you have provided to the Service Provider in order to provide the Service. It is your responsibility to maintain the security of your phone and access to the Application. The Service Provider strongly advise against jailbreaking or rooting your phone, which involves removing software restrictions and limitations imposed by the official operating system of your device. Such actions could expose your phone to malware, viruses, malicious programs, compromise your phone's security features, and may result in the Application not functioning correctly or at all. <br> <br>
+Please be aware that the Service Provider does not assume responsibility for certain aspects. Some functions of the Application require an active internet connection, which can be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be held responsible if the Application does not function at full capacity due to lack of access to Wi-Fi or if you have exhausted your data allowance. <br> <br>
+If you are using the application outside of a Wi-Fi area, please be aware that your mobile network provider's agreement terms still apply. Consequently, you may incur charges from your mobile provider for data usage during the connection to the application, or other third-party charges. By using the application, you accept responsibility for any such charges, including roaming data charges if you use the application outside of your home territory (i.e., region or country) without disabling data roaming. If you are not the bill payer for the device on which you are using the application, they assume that you have obtained permission from the bill payer. <br><br>
+Similarly, the Service Provider cannot always assume responsibility for your usage of the application. For instance, it is your responsibility to ensure that your device remains charged. If your device runs out of battery and you are unable to access the Service, the Service Provider cannot be held responsible. <br><br>
+In terms of the Service Provider's responsibility for your use of the application, it is important to note that while they strive to ensure that it is updated and accurate at all times, they do rely on third parties to provide information to them so that they can make it available to you. The Service Provider accepts no liability for any loss, direct or indirect, that you experience as a result of relying entirely on this functionality of the application. <br> <br>
+The Service Provider may wish to update the application at some point. The application is currently available as per the requirements for the operating system (and for any additional systems they decide to extend the availability of the application to) may change, and you will need to download the updates if you want to continue using the application. The Service Provider does not guarantee that it will always update the application so that it is relevant to you and/or compatible with the particular operating system version installed on your device. However, you agree to always accept updates to the application when offered to you. The Service Provider may also wish to cease providing the application and may terminate its use at any time without providing termination notice to you. Unless they inform you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must cease using the application, and (if necessary) delete it from your device.
+</p>
+  <h4 class="head">Changes to These Terms and Conditions</h4>
+  <p class="para">The Service Provider may periodically update their Terms and Conditions. Therefore, you are advised to review this page regularly for any changes. The Service Provider will notify you of any changes by posting the new Terms and Conditions on this page. <br> <br>These terms and conditions are effective as of 2025-01-01</p>
+  <h4 class="head">Contact Us</h4>
+  <p class="para">If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the Service Provider at support@pert.me.</p>
+ <!-- FOR FOOTER- SECTION-->
+<div class="footer">
+  <div class="logo">
+    <h1>SmartHive</h1>
+    <div class="imge">
+      <img src="facebook.jpg" alt="facebook" height="28px">
+      <img src="twitter.jpg" alt="twitter" height="28px">
+      <img src="instagram.jpg" alt="instagram" height="28px">
+      <img src="youtube.jpg" alt="youtube" height="28px">
+    </div>
+    <div class="copyright">
+      <p>© 2025 Pert Infoconsulting Pvt Ltd <br>
+All Rights Reserved.</p>
+    </div>
+  </div>
+  <div class="foot1">
+    <ul>
+      <h3>Quick Links</h3>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms And Condition.html">Terms & Condition</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="foot2">
+     <ul>
+      <h3>Contact Us</h3>
+      <li><a href="">Sales: +91 9100 920031</a></li>
+      <li><a href="">hello@pert.me</a></li>
+      <li><a href="">Support: +91 7075 01 02 03</a></li>
+      <li><a href="">support@pert.me</a></li>
+    </ul>
+  </div>
+   <div class="foot3">
+     <ul>
+      <h3>Address</h3>
+      <li><a href="">Experience Center</a></li>
+      <li><a href="">Alladin Mansion, 1-11-252/1A-1D, Street Number <br> 3, near Shoppers Stop, Begumpet</a></li>
+      <li><a href="">Hyderabad,Telangana-500016</a></li>
+</ul>
+</div>
+</body>
+</html>

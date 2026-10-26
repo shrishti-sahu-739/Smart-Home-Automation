@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Smart Switches</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #e6e6e6;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      border: 2px solid #FF9933;
+      padding: 20px 24px;
+      background-color: #1a1a1a;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .title {
+      font-size: 2rem;
+      color: #FF9933;
+      font-weight: bold;
+      font-family: serif;
+    }
+
+    .navbar .list {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .navbar .list a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #ccc;
+      transition: color 0.3s ease;
+      font-family: serif;
+    }
+
+    .navbar .list a:hover {
+      color: #FF9933;
+    }
+
+    .phone-icon a {
+      text-decoration: none;
+      color: #FF9933;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .phone-icon .material-icons {
+      font-size: 22px;
+      color: #FF9933;
+    }
+
+    /* Dropdown */
+    .sub-menu {
+      display: none;
+    }
+
+    .navbar ul li {
+      position: relative;
+    }
+
+    .navbar ul li:hover .sub-menu {
+      display: block;
+      position: absolute;
+      width: 220px;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      border-radius: 10px;
+      z-index: 999;
+      padding: 10px;
+    }
+
+    .navbar ul li:hover .sub-menu ul li {
+      margin: 15px 0;
+    }
+
+    .navbar ul li:hover .sub-menu ul li a {
+      color: #ccc;
+    }
+
+    .navbar ul li:hover .sub-menu ul li a:hover {
+      color: #FF9933;
+    }
+
+    /* Hero Section */
+    .AC-Section {
+      width: 100%;
+    }
+
+    .main-img {
+      position: relative;
+      width: 100%;
+      min-height: 90vh;
+      background: url('switche.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 80px;
+    }
+
+    .detail {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 60px;
+      border-radius: 20px;
+    }
+
+    .heading {
+      font-size: 42px;
+      color: #FF9933;
+      font-weight: 600;
+    }
+
+    .detail p {
+      font-size: 20px;
+      color: #ccc;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Features Section */
+    .features {
+      margin: 6rem auto;
+      text-align: center;
+      width: 85%;
+    }
+
+    .features h2 {
+      font-size: 32px;
+      color: #FF9933;
+      margin-bottom: 2rem;
+    }
+
+    .feature-boxes {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .feature {
+      background-color: #1a1a1a;
+      border: 1px solid #FF9933;
+      border-radius: 12px;
+      width: 250px;
+      padding: 30px;
+      transition: transform 0.3s ease, background 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      background-color: #262626;
+    }
+
+    .feature h3 {
+      color: #FF9933;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #ccc;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    /* Product Showcase */
+    .product-showcase {
+      width: 85%;
+      margin: 5rem auto;
+      text-align: center;
+    }
+
+    .product-showcase h2 {
+      color: #FF9933;
+      font-size: 32px;
+      margin-bottom: 2rem;
+    }
+
+    .product-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #FF9933;
+      border-radius: 12px;
+      width: 280px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      color: #FF9933;
+      margin-top: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    /* Footer */
+    .footer {
+      height: 350px;
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: space-around;
+      padding: 30px;
+      border-top: 2px solid #FF9933;
+    }
+
+    .footer h3, .footer a, .footer p {
+      color: #ccc;
+    }
+
+    .footer a:hover {
+      color: #FF9933;
+    }
+
+    .logo h1 {
+      color: #FF9933;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="title">SmartHive</div>
+    <ul class="list">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a>
+        <div class="sub-menu">
+          <ul>
+            <li><a href="Products.html">Smart Lighting</a></li>
+            <li><a href="Smart-Fans.html">Smart Fans</a></li>
+            <li><a href="switches.html">Smart Switches</a></li>
+            <li><a href="Smart-AC.html">Smart A.C</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="pra.html">Catalogue</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+    </ul>
+    <div class="phone-icon">
+      <a href="#"><span class="material-icons">call</span> +91 94244 40489</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="AC-Section">
+    <div class="main-img">
+      <div class="detail">
+        <h1 class="heading">Smart Switches for Effortless Control</h1>
+        <p>Experience next-gen convenience with SmartNest Wi-Fi switches. Control your lights, fans, and appliances from anywhere — all from your smartphone or voice command.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Why Choose SmartNest Switches?</h2>
+    <div class="feature-boxes">
+      <div class="feature">
+        <h3>Wi-Fi Enabled</h3>
+        <p>Control your devices using the SmartNest app — no hub needed.</p>
+      </div>
+      <div class="feature">
+        <h3>Voice Control</h3>
+        <p>Works with Alexa and Google Assistant for hands-free use.</p>
+      </div>
+      <div class="feature">
+        <h3>Energy Saving</h3>
+        <p>Monitor power usage and schedule operations to save electricity.</p>
+      </div>
+      <div class="feature">
+        <h3>Stylish Design</h3>
+        <p>Touch-enabled panels with a modern glass finish fit every décor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section class="product-showcase">
+    <h2>Our Smart Switch Range</h2>
+    <div class="product-cards">
+      <div class="card">
+        <img src="1gang.jpg" alt="1 Gang Switch">
+        <h3>1-Gang Smart Switch</h3>
+        <p>Perfect for single light or appliance control.</p>
+      </div>
+      <div class="card">
+        <img src="2gang.jpg" alt="2 Gang Switch">
+        <h3>2-Gang Smart Switch</h3>
+        <p>Dual control panel for fans or lighting setups.</p>
+      </div>
+      <div class="card">
+        <img src="4gang.jpg" alt="4 Gang Switch">
+        <h3>4-Gang Smart Switch</h3>
+        <p>Complete room control in one sleek panel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="logo">
+      <h1>SmartHive</h1>
+      <div class="imge">
+        <img src="facebook.jpg" alt="facebook" height="28px">
+        <img src="twitter.jpg" alt="twitter" height="28px">
+        <img src="instagram.jpg" alt="instagram" height="28px">
+        <img src="youtube.jpg" alt="youtube" height="28px">
+      </div>
+      <div class="copyright">
+        <p>© 2025 Pert Infoconsulting Pvt Ltd <br>All Rights Reserved.</p>
+      </div>
+    </div>
+    <div class="foot1">
+      <ul>
+        <h3>Quick Links</h3>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Keypads.html">Products</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms And Condition.html">Terms & Condition</a></li>
+        <li><a href="conatct.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="foot2">
+      <ul>
+        <h3>Contact Us</h3>
+        <li><a href="">Sales: +91 9100 9200 31</a></li>
+        <li><a href="">hello@pert.me</a></li>
+        <li><a href="">Support: +91 7075 01 02 03</a></li>
+        <li><a href="">support@pert.me</a></li>
+      </ul>
+    </div>
+    <div class="foot3">
+      <ul>
+        <h3>Address</h3>
+        <li><a href="">Experience Center</a></li>
+        <li><a href="">Alladin Mansion, 1-11-252/1A-1D, Street Number 3, near Shoppers Stop, Begumpet</a></li>
+        <li><a href="">Hyderabad, Telangana-500016</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

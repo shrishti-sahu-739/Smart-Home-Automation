@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Smart Fans</title>
+    <style>
+    *{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+.navbar {
+  border: 2px solid #FF9933;
+  padding: 30px 24px;
+  background-color: #FAF9F8;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between; /* left → title, middle → list, right → phone */
+  align-items: center;
+
+}
+
+.title {
+  font-size: 2rem;
+  color: #FF9933;
+  font-weight: bold;
+  font-family: serif;
+}
+
+
+.navbar .list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+ .navbar .list a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #7D7D7D;
+  font-family: serif;
+  transition: color 0.3s ease;
+}
+
+.list a:hover {
+  color: #FF9933;
+}
+
+.phone-icon a {
+  text-decoration: none;
+  color: #FF9933;
+  /* font-weight: 900; */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+   gap: 8px;
+}
+.phone-icon a:hover{
+  text-decoration: none;
+}
+
+.phone-icon .material-icons {
+  font-size: 22px;
+  color: #FF9933;
+}
+/* DropDown */
+.sub-menu{
+  display: none;
+}
+.navbar ul li {
+  position: relative; /* ensures submenu positions relative to parent */
+}
+
+
+.navbar ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  width: 250px;
+  top: 100%; /* place directly below parent */
+  left: 0;   /* align perfectly with parent */
+  background-color: #fdf1e5;
+  border-radius: 10px;
+  z-index: 999;
+  margin: 0; /* remove the gap that breaks hover */
+  padding: 5px 10px;
+}
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul li{
+  display: block;
+  margin: 20px;
+  border-radius: 0px;
+  text-align: left;
+  
+}
+
+.navbar ul li:hover .sub-menu ul li :last-child{
+  border-bottom: none;
+}
+
+.navbar ul li:hover .sub-menu ul li a:hover{
+  color:#f93;
+}
+
+.contact-section1{
+    margin-top: 50px;
+    padding-left: 15px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text-line{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.head{
+    font-size: 2.5rem;
+    color: #FF9933;
+    font-style: italic;
+    text-align: left;
+    white-space: nowrap;
+    font-weight: 100;
+}
+
+.contact-section1 .line{
+flex-grow: 1;
+height: 2px;
+background-color: #f93;
+}
+
+/* Image-Section */
+.fan-section{
+  padding: 30px;
+}
+.main-img{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: url('fan-img.jpg') no-repeat center center/cover;
+    border-radius: 20px;
+    margin-top: 40px;
+   }
+
+.main-head{
+    text-align: center;
+    color:#282525;
+    font-size: 45px;
+    font-weight: 100;
+    padding: 40px;
+}
+
+.fan-detail{
+    padding: 80px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #eeeeee !important;
+    display: flex;
+    gap: 80px;
+    height: 650px;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.content h1{
+    font-weight: 200;
+    color: #3d3c3c;
+    margin-left: 20rem;
+    font-size: 40px;
+}
+
+.inner-content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    margin-left: 10rem;
+
+}
+
+.inner-content h3{
+ 
+    color: #3a3939;
+    font-size: 30px;
+
+}
+
+.inner-content p{
+   
+    color: #555;
+   
+    font-size: 20px;
+ 
+}
+
+/* Line-Section */
+.contact-section3{
+  margin-top: 40px;
+}
+
+.text-line2{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+ .heading{
+
+    font-size: 50px;
+  margin-right: 5rem;
+  color:#FF9933;
+    font-weight: 100;
+ margin-left: 25px; 
+  font-style: italic;
+  margin-top: 2rem;
+}
+.contact-section3 .line1{
+flex-grow: 1;
+height: 2px;
+background-color: #f93;
+}
+
+/* Detail-Section-2 */
+
+.heading{
+  color: #FF9933;
+  font-style: italic;
+  font-weight: 100;
+  margin-top: 1.2rem;
+  margin-left: 5rem;
+}
+.contact-section3 .line1{
+flex-grow: 1;
+height: 2px;
+background-color: #f93;
+}
+
+/* .heading{
+height: 850px;
+width: 95%;
+background-color: white;
+margin-top: 50px;
+margin-left:50px;
+border-radius: 1rem;
+padding-left: 70px;
+} */
+.heading h1{
+  padding-top: 30px;
+  padding-left: 10px;
+}
+.container{
+ display: flex;
+}
+.image1{
+    height: 680px;
+    width: 600px;
+    border: 2px solid #FF9933;
+    border-radius: 1rem;
+    margin-top: 30px;
+}
+.image1 img{
+    margin-left: 50px;
+    margin-top: 50px ;
+}
+.image1 p{
+    font-size: 23px;
+    color: gray;
+    padding: 40px;
+    /* line-height: 40px; */
+}
+.img img{
+    border-radius: 1rem;
+    margin-top: 30px;
+}
+
+
+/* Footer */
+.footer{
+  height: 350px;
+  background-color:#ffe1c44d;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+ul{
+  list-style: none;
+}
+.logo{
+  margin-top:5%;
+  font-size:30px;
+  color: #FF9933;
+}
+.foot1 ,
+.foot2 ,
+.foot3 {
+ margin-top: 5%;
+
+}
+
+h3{
+  font-size: 20px;
+}
+a{
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+  font-size: 20px;
+  color: #7D7D7D;
+ 
+}
+a:hover{
+  color: #FF9933;
+  text-decoration: underline;
+}
+
+.imge{
+  /* margin-left: 80px; */
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.1rem;
+}
+.copyright{
+    margin-top: 1rem;
+    color: #7D7D7D;
+    font-size:20px;
+
+}
+.copyright p{
+  font-size:20px;
+  
+}
+.foot1 ul,
+.foot2 ul,
+.foot3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* automatic space between links */
+}
+
+    </style>
+</head>
+<body>
+     <header>
+    <nav class="navbar">
+    <div class="title">SmartHive</div>
+    <ul class="list">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a>
+       <div class="sub-menu">
+        <ul>
+          <li><a href="Products.html">Smart Lighting</a></li>
+          <li><a href="Smart-Fans.html">Smart Fans</a></li>
+          <li><a href="switches.html">Smart Switches</a></li>
+          <li><a href="Smart-AC.html">Smart A.C</a></li>
+
+        </ul>
+ </div>
+      </li>
+      </li>
+      <li><a href="pra.html">Catalogue</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+            <li><a href="Device.php">Device Control</a></li>
+
+    </ul>
+    <div class="phone-icon">
+      <a href="#" id="phone">
+        <span class="material-icons">call</span> +91 94244 40489
+      </a>
+    </div>
+  </nav>
+   </header>
+
+<!-- Line-Section -->
+ <section class="contact-section1">
+        <div class="text-line">
+            <h1 class="head">Smart Fans</h1>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- Image-Section -->
+     <div class="fan-section">
+        <div class="main-img">
+           <div class="">
+            <h1 class="main-head">Control Everything at Your Fingertips</h1>
+           </div> 
+            </div>
+          
+          </div>
+
+    <!-- Detail-Section -->
+<div class="fan-detail">
+    <div class="fan-img">
+        <img src="fan-img2.jpg" alt="" height="500px" width="750px">
+    </div>
+    <!-- Content-section -->
+    <div class="content">
+        <h1>Live in the Future</h1>
+       <div class="inner-content">
+        <!-- <span><img src="mobile.jpg" alt="" style="width: 50px; height: 50p; border-radius: 50px; "></span> -->
+        <h3> <span><img src="mobile.jpg" alt="" style="width: 35px; height: 35p; border-radius: 50px; "></span>Control Everything at Your Fingertips</h3>
+        <p>Turn on your lights, play your favourite music or change your room
+        <br> temperature, at the tap of your smartphone.</p>
+
+        <h3> <span><img src="setting.jpg" alt="" style="width: 35px; height: 35p; border-radius: 50px; "></span>Run Personalized Schedules</h3>
+        <p>Have your coffee ready when you wake up. Automatically turn 
+        <br>everything off when you leave for work. Experience true intelligence.</p>
+
+        <h3> <span><img src="mice.jpg" alt="" style="width:35px; height:35px; border-radius: 40px; "></span>Talk to Your Home or Make it Talk.</h3>
+        <p> Simply talk to your virtual voice assistant, and ask it to do anything for
+        <br> you– be it ordering groceries to solving a math problem.</p>
+
+       </div>
+    </div>
+
+</div>
+
+<!-- Line-Section2 -->
+ <section class="contact-section3">
+        <div class="text-line2">
+          <div class="line1"></div>
+          <h1 class="heading">Control From Your Smartphone</h1>
+          <div class="line1"></div>
+        </div>
+ </section>
+
+<!-- Detail-section-2 -->
+ <div class="heading">
+      <!-- <h1 >4" Smart Control Panel</h1> -->
+    
+    <div class="container">
+    <div class="image1">
+        <img src="fan-img3.jpg" alt="" height="600px" width="500px">
+    </div>
+    <div class="image1">
+        <p>Smart Fan – Product Overview <br> <br>
+
+Energy Efficient Performance <br>
+
+Power consumption: 50W – 75W (depending on speed mode). <br>
+
+Designed to deliver maximum airflow with minimum energy use. <br> <br>
+
+
+
+Timer & Scheduling <br> 
+
+Virtual scheduling option allows setting fan on/off duration via the application dashboard. <br>
+
+Helps monitor and optimize energy usage. <br> <br>
+
+
+Long Lifespan <br> 
+
+Durable motor design with an average lifespan of up to 15,000 hours. <br>
+
+Requires minimal maintenance.<br> <br>
+
+
+Virtual Control Features <br> 
+
+On/Off toggle buttons displayed on the app. <br> 
+
+Duration tracking to show how long the fan has been running.<br>
+
+Speed adjustment sliders for a realistic user experience.
+             <br><br></p>
+
+    </div>
+
+    <div class="img">
+        <img src="Smart-fans.jpg" alt="" height="680px" width="600px">
+    </div>
+</div>
+ </div>
+
+
+        <!-- Footer -->
+       <div class="footer">
+  <div class="logo">
+    <h1>SmartHive</h1>
+    <div class="imge">
+      <img src="facebook.jpg" alt="facebook" height="28px">
+      <img src="twitter.jpg" alt="twitter" height="28px">
+      <img src="instagram.jpg" alt="instagram" height="28px">
+      <img src="youtube.jpg" alt="youtube" height="28px">
+    </div>
+    <div class="copyright">
+      <p>© 2025 Pert Infoconsulting Pvt Ltd <br>
+All Rights Reserved.</p>
+    </div>
+  </div>
+  <div class="foot1">
+    <ul>
+      <h3>Quick Links</h3>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms And Condition.html">Terms & Condition</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="foot2">
+     <ul>
+      <h3>Contact Us</h3>
+      <li><a href="">Sales: +91 9100 9200 31</a></li>
+      <li><a href="">hello@pert.me</a></li>
+      <li><a href="">Support: +91 7075 01 02 03</a></li>
+      <li><a href="">support@pert.me</a></li>
+    </ul>
+  </div>
+   <div class="foot3">
+     <ul>
+      <h3>Address</h3>
+      <li><a href="">Experience Center</a></li>
+      <li><a href="">Alladin Mansion, 1-11-252/1A-1D, Street Number <br> 3, near Shoppers Stop, Begumpet</a></li>
+      <li><a href="">Hyderabad,Telangana-500016</a></li>
+    </ul>
+  </div>
+
+
+
+</body>
+</html>

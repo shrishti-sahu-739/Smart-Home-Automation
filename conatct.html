@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <title>Contact</title>
+    <style>
+        
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    body{
+    background-color: #f9f7f1;
+    }
+ .navbar {
+  border: 2px solid #FF9933;
+  padding: 30px 24px;
+  background-color: #FAF9F8;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between; /* left → title, middle → list, right → phone */
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: #FF9933;
+  font-weight: bold;
+  font-family: serif;
+}
+
+
+.navbar .list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+ .navbar .list a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #7D7D7D;
+  font-family: serif;
+  transition: color 0.3s ease;
+}
+
+.list a:hover {
+  color: #FF9933;
+}
+
+.phone-icon a {
+  text-decoration: none;
+  color: #FF9933;
+  /* font-weight: 900; */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+   gap: 8px;
+}
+.phone-icon a:hover{
+  text-decoration: none;
+}
+
+.phone-icon .material-icons {
+  font-size: 22px;
+  color:#FF9933;
+}
+
+.text-line{
+    display: flex;
+    align-items: center;
+}
+
+.text-line h1{
+     font-size: 50px;
+    font-style: italic;
+    color: #FF9933;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    font-weight: 100;
+}
+.contact-section1 .line{
+  width: 87%;
+  height: 2px;
+  background-color: #FF9933;
+  margin-left: 1rem;
+
+}
+
+.contact-section2{
+  display: flex;
+  justify-content: space-around;
+}
+
+.block{
+  border: 1px solid #f93;
+  border-radius: 25px;
+  background-color: #fdf1e6;
+  text-align: center;
+  padding: 1rem;
+  align-items: center;
+  height:390px;
+  font-size: 20px;
+  width: 430px;
+}
+
+ .icon img{
+  width: 35px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.text-row-1{
+  color: #f93;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.text-row-1 p{
+    font-size: 28px;
+    font-style: italic;
+    font-weight:800;
+}
+
+.text-row-2 p{
+    font-size: 25px;
+    font-style: italic;
+    color: #7D7D7D;}
+.heading{
+  font-size: 3.5rem;
+    color: #FF9933;
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+margin-bottom: 30px;
+}
+
+.contact-section3{
+  margin-top: 100px;
+}
+
+.text-line2{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-section3 .line1{
+flex-grow: 1;
+height: 2px;
+background-color: #f93;
+}
+
+/* SEction-4 */
+.contact-section4{
+
+  padding: 40px;
+}
+/* Row styling */
+.row-block {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+/* Card default */
+.card {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+/* Size variations */
+.small {
+  flex: 1;             
+  height: 400px;
+}
+
+.big {
+  flex: 2;              /* badi width */
+  height: 400px;
+}
+
+
+.footer{
+  height: 350px;
+  background-color:#ffe1c44d;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+ul{
+  list-style: none;
+}
+.logo{
+  margin-top:5%;
+  font-size:30px;
+  color: #FF9933;
+}
+.foot1 ,
+.foot2 ,
+.foot3 {
+ margin-top: 5%;
+
+}
+
+h3{
+  font-size: 20px;
+}
+a{
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+  font-size: 20px;
+  color: #7D7D7D;
+ 
+}
+a:hover{
+  color: #FF9933;
+  text-decoration: underline;
+}
+
+.imge{
+  /* margin-left: 80px; */
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.1rem;
+}
+.copyright{
+    margin-top: 1rem;
+    color: #7D7D7D;
+    font-size:20px;
+
+}
+.copyright p{
+  font-size:18px;
+}
+.foot1 ul,
+.foot2 ul,
+.foot3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* automatic space between links */
+}
+
+/* DropDown */
+.sub-menu{
+  display: none;
+}
+.navbar ul li {
+  position: relative;
+  color: #FF9933;
+  
+}
+
+.navbar ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  width:250px;
+  top: 100%; /* place directly below parent */
+  left: 0;   /* align perfectly with parent */
+  background-color: #fdf1e5;
+  border-radius: 10px;
+  z-index: 999;
+  margin: 0; /* remove the gap that breaks hover */
+  padding: 5px 10px;
+}
+
+
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul li{
+  display: block;
+  margin: 20px;
+  border-radius: 0px;
+  text-align: left;
+  
+}
+
+.navbar ul li:hover .sub-menu ul li :last-child{
+  border-bottom: none;
+}
+
+.navbar ul li:hover .sub-menu ul li a:hover{
+ color:#FF9933;
+}
+    </style>
+</head>
+<body>
+    
+    <header>
+    <nav class="navbar">
+    <div class="title" >SmartHive
+    </div>
+    <ul class="list">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a>
+       <div class="sub-menu">
+        <ul>
+          <li><a href="Products.html">Smart Lighting</a></li>
+          <li><a href="Smart-Fans.html">Smart Fans</a></li>
+          <li><a href="switches.html">Smart Switches</a></li>
+          <li><a href="Smart-AC.html">Smart A.C</a></li>
+
+        </ul>
+ </div>
+      </li>
+      </li>
+      <li><a href="pra.html">Catalogue</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+            <li><a href="Device.php">Device Control</a></li>
+
+    </ul>
+    <div class="phone-icon">
+      <a href="#" id="phone">
+        <span class="material-icons">call</span> +91 94244 40489
+      </a>
+    </div>
+   </nav>
+   </header>
+
+   <!-- Contact-Section -1-->
+    <section class="contact-section1">
+        <div class="text-line">
+            <h1>Contact</h1>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- Contact-Section -2 -->
+     <section class="contact-section2">
+
+      <!-- Block-1 -->
+      <div class="block">
+
+        <div class="icon">
+          <img src="img18.jpg" alt="">
+        </div>
+        <div class="text-row-1">
+          <p>Sales Mobile No</p>
+        </div>
+        <div class="text-row-2">
+          <p> +91 9691043515</p>
+        </div>
+
+      </div>
+
+      <!-- Block-2 -->
+       <div class="block">
+
+        <div class="icon">
+          <img src="img19.jpg" alt="">
+        </div>
+        <div class="text-row-1">
+          <p>Sales Email id</p>
+        </div>
+        <div class="text-row-2">
+          <p> hello@pert.me</p>
+        </div>
+
+      </div>
+
+      <!-- Block-3 -->
+       <div class="block">
+
+        <div class="icon">
+          <img src="img20.jpg" alt="">
+        </div>
+        <div class="text-row-1">
+          <p>Support Phone No</p>
+        </div>
+        <div class="text-row-2">
+          <p>91 8839302764</p>
+        </div>
+
+      </div>
+
+      <!-- Block-4 -->
+       <div class="block">
+
+        <div class="icon">
+          <img src="img21.jpg" alt="">
+        </div>
+        <div class="text-row-1">
+          <p>Experience Center</p>
+        </div>
+        <div class="text-row-2">
+          <p>Alladin Mansion, 1-11-252/1A-1D, Street Number 3, near Shoppers Stop, Begumpet, Hyderabad, Telangana - 500016</p>
+        </div>
+
+      </div>
+     </section>
+
+     <!-- Contact-Section-3  -->
+      <section class="contact-section3">
+        <div class="text-line2">
+          <div class="line1"></div>
+          <h1 class="heading">Experience Center</h1>
+          <div class="line1"></div>
+        </div>
+      </section>
+
+    <!-- Contact-Section-4  -->
+         <section class="contact-section4">
+         <div class="row-block">
+  <div class="card small"><img src="img22.jpg" alt=""></div>
+  <div class="card big"><img src="img23.jpg" alt=""></div>
+  <div class="card small"><img src="img24.jpg" alt=""></div>
+</div>
+
+<div class="row-block">
+  <div class="card big"><img src="img25.jpg" alt=""></div>
+  <div class="card small"><img src="img26.jpg" alt=""></div>
+  <div class="card small"><img src="img27.jpg" alt=""></div>
+</div>
+</section>
+
+<!-- FOR FOOTER- SECTION-->
+<div class="footer">
+  <div class="logo">
+    <h1>SmartHive</h1>
+    <div class="imge">
+      <img src="facebook.jpg" alt="facebook" height="28px">
+      <img src="twitter.jpg" alt="twitter" height="28px">
+      <img src="instagram.jpg" alt="instagram" height="28px">
+      <img src="youtube.jpg" alt="youtube" height="28px">
+    </div>
+    <div class="copyright">
+      <p>© 2025 Pert Infoconsulting Pvt Ltd <br>
+All Rights Reserved.</p>
+    </div>
+  </div>
+  <div class="foot1">
+    <ul>
+      <h3>Quick Links</h3>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms And Condition.html">Terms & Condition</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="foot2">
+     <ul>
+      <h3>Contact Us</h3>
+      <li><a href="">Sales: +91 9100 9200 31</a></li>
+      <li><a href="">hello@pert.me</a></li>
+      <li><a href="">Support: +91 7075 01 02 03</a></li>
+      <li><a href="">support@pert.me</a></li>
+    </ul>
+  </div>
+   <div class="foot3">
+     <ul>
+      <h3>Address</h3>
+      <li><a href="">Experience Center</a></li>
+      <li><a href="">Alladin Mansion, 1-11-252/1A-1D, Street Number <br> 3, near Shoppers Stop, Begumpet</a></li>
+      <li><a href="">Hyderabad,Telangana-500016</a></li>
+    </ul>
+  </div>
+
+
+</div>
+
+
+ 
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Popup Form Example</title>
+  <style>
+    /* Background overlay */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    /* Popup box */
+    .popup-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      animation: fadeIn 0.4s;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.8);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    /* Close button */
+    .close {
+      float: right;
+      font-size: 20px;
+      color: red;
+      cursor: pointer;
+    }
+
+    /* Form styling */
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Popup -->
+  <div id="popupForm" class="popup">
+    <div class="popup-content">
+      <span class="close" id="closeBtn">&times;</span>
+      <h2>Login Form</h2>
+      <form>
+        <input type="text" placeholder="Enter Username" required>
+        <input type="password" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Page load hone par popup open ho
+    window.onload = function() {
+      document.getElementById("popupForm").style.display = "block";
+    }
+
+    // Close button click karne par band ho jaye
+    document.getElementById("closeBtn").onclick = function() {
+      document.getElementById("popupForm").style.display = "none";
+    }
+
+    // Agar user background pe click kare to bhi band ho jaye
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("popupForm")) {
+        document.getElementById("popupForm").style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

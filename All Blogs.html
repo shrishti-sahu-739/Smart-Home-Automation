@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Blogs</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        *{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background: #f5f5f5;
+
+}
+.navbar {
+  border: 2px solid #FF9933;
+  padding: 30px 24px;
+  background-color: #FAF9F8;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between; /* left → title, middle → list, right → phone */
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: #FF9933;
+  font-weight: bold;
+  font-family: serif;
+
+}
+
+
+.navbar .list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+ .navbar .list a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #7D7D7D;
+  font-family: serif;
+  transition: color 0.3s ease;
+}
+
+.list a:hover {
+  color: #FF9933;
+}
+
+.phone-icon a {
+  text-decoration: none;
+  color: #FF9933;
+  /* font-weight: 900; */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+   gap: 8px;
+}
+.phone-icon a:hover{
+  text-decoration: none;
+}
+
+.phone-icon .material-icons {
+  font-size: 22px;
+  color: #FF9933;
+}
+
+/* All Blog Container */
+.head{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 30px;
+  color: #413f3f;
+}
+.all-blog-container{
+    /* width: 300px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog-card-full{
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease;
+        padding-bottom: 10px;
+
+}
+
+.blog-card-full:hover {
+    transform: translateY(-4px);
+  }
+
+.blog-card-full img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-card-full .content{
+  padding: 20px;
+}
+
+.blog-card-full h2{
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.blog-card-full p{
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color:#555 ;
+}
+
+.blog-card-full a.read-more {
+  color: #007BFF;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.anchor-div{
+  padding:   20px;
+  margin-bottom: 20px;
+}
+
+
+.footer{
+  height: 350px;
+  background-color:#ffe1c44d;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+ul{
+  list-style: none;
+}
+.logo{
+  margin-top:5%;
+  font-size:30px;
+  color: #FF9933;
+}
+.foot1 ,
+.foot2 ,
+.foot3 {
+ margin-top: 5%;
+
+}
+
+h3{
+  font-size: 20px;
+}
+a{
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+  font-size: 20px;
+  color: #7D7D7D;
+ 
+}
+a:hover{
+  color: #FF9933;
+  text-decoration: underline;
+}
+
+.imge{
+  /* margin-left: 80px; */
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.1rem;
+}
+.copyright{
+    margin-top: 1rem;
+    color: #7D7D7D;
+    font-size:20px;
+
+}
+.copyright p{
+  font-size:18px;
+}
+.foot1 ul,
+.foot2 ul,
+.foot3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* automatic space between links */
+}
+
+/* DropDown */
+.sub-menu{
+  display: none;
+}
+.navbar ul li {
+  position: relative;
+  color: #FF9933;
+  
+}
+
+.navbar ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  width:250px;
+  top: 100%; /* place directly below parent */
+  left: 0;   /* align perfectly with parent */
+  background-color: #fdf1e5;
+  border-radius: 10px;
+  z-index: 999;
+  margin: 0; /* remove the gap that breaks hover */
+  padding: 5px 10px;
+}
+
+
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul li{
+  display: block;
+  margin: 20px;
+  border-radius: 0px;
+  text-align: left;
+  
+}
+
+.navbar ul li:hover .sub-menu ul li :last-child{
+  border-bottom: none;
+}
+
+.navbar ul li:hover .sub-menu ul li a:hover{
+ color:#FF9933;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <nav class="navbar">
+    <div class="title" >SmartHive
+      <!-- <img src="logo.png" alt="Pert" style="width:60px; height: 30px; font-weight: bold;"  > -->
+    </div>
+    <ul class="list">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a>
+        <div class="sub-menu">
+        <ul>
+          <li><a href="Products.html">Smart Lighting</a></li>
+          <li><a href="Smart-Fans.html">Smart Fans</a></li>
+          <li><a href="">Smart Switches</a></li>
+          <li><a href="Smart-AC.html">Smart A.C</a></li>
+
+        </ul>
+ </div>
+      
+      </li>
+      <li><a href="pra.html">Catalogue</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+            <li><a href="Device.php">Device Control</a></li>
+
+    </ul>
+    <div class="phone-icon">
+      <a href="#" id="phone">
+        <span class="material-icons">call</span> +91 94244 40489
+      </a>
+    </div>
+  </nav>
+
+<!-- All Blogs -->
+
+  <section>
+    <h1 class="head">All Blog Posts</h1>
+    <div class="all-blog-container">
+      <!-- Blog-1 -->
+      <div class="blog-card-full">
+        <img src="img28.jpg" alt="imge1">
+        <div class="content">
+          <h2>Home Automation – The Smart Way to Live with Pert</h2>
+          <p>Imagine living in a home that responds to your voice, automates your daily tasks, and adds style and security to your lifestyle. Home automation is no longer a futuristic concept — it’s here, and it’s changing how we live . From smart switches to motion sensors, curtain controllers, and voice-controlled keypads, Pert offers an end-to-end solution for residents who want comfort, convenience, and control at their fingertips. In this blog, explore how Pert – Smart Home Automation Solutions is redefining modern living for 2BHK apartments to luxury villas. Ready to transform your home? Read on.</p>
+        </div>
+         <div class="anchor-div">
+          <a href="" class="read-more">Read Article -></a>
+         </div>
+        </div>
+
+        <!-- Blog-2 -->
+        
+      <div class="blog-card-full">
+        <img src="img30.jpg" alt="imge1">
+        <div class="content">
+          <h2>How Pert Supports Custom Smart Home Integration for Real Estate Builders and Developers</h2>
+          <p>Pert, the best smart home automation company, supports real estate builders and developers with premium automation solutions. From smart switches to scene control keypads, Pert customizes automation for luxury apartments, villas, and gated communities. Future-proof your projects and attract modern buyers with Pert’s smart home integration.</p>
+        </div>
+        <div class="anchor-div" > 
+          <a href="" class="read-more">Read Article -></a>
+        </div>
+      </div>
+
+      <!-- Blog-3 -->
+      <div class="blog-card-full">
+        <img src="img29.jpg" alt="imge1">
+        <div class="content">
+          <h2>Future-Proof Your Luxury Apartments with Pert Smart Home Automation Technology</h2>
+          <p>Transform your luxury apartment into a futuristic smart living space with Pert . From smart lights to advanced keypads and scene control, future-proof your home with the best automation solutions. Visit the Pert Experience Center in Begumpet for a hands-on demo today.</p>
+        </div>
+        <div  class="anchor-div"> 
+          <a href="" class="read-more">Read Article -></a>
+        </div>
+      </div>
+
+      <!-- Blog-4 -->
+       <div class="blog-card-full">
+        <img src="img31.jpg" alt="imge1">
+        <div class="content">
+          <h2>Why Smart Homes Are the Future of Urban Living in India</h2>
+          <p>Discover how smart home technology is transforming the way urban Indians live, work, and relax. From energy efficiency to enhanced comfort and safety, Pert - the leading smart home automation is at the forefront of this revolution.</p>
+        </div>
+        <div  class="anchor-div"> 
+          <a href="" class="read-more">Read Article -></a>
+        </div>
+      </div>
+
+      <!-- Blog-5 -->
+       <div class="blog-card-full">
+        <img src="img32.jpg" alt="imge1">
+        <div class="content">
+          <h2>Living a Luxury Life with Smart Home Technology by Pert</h2>
+          <p>Experience luxury living with Pert – the leading smart home automation, offering intelligent, secure, and stylish living solutions.</p>
+        </div>
+        <div  class="anchor-div"> 
+          <a href="" class="read-more">Read Article -></a>
+        </div>
+      </div>
+
+      <!-- Blog-6 -->
+       <div class="blog-card-full">
+        <img src="img35.jpg" alt="imge1">
+        <div class="content">
+          <h2>Top 4 Smart Home Features Every Modern Home Should Have</h2>
+          <p>Top 4 Smart Home Features Every Modern Home in Hyderabad Should Have</p>
+        </div>
+        <div  class="anchor-div"> 
+          <a href="" class="read-more">Read Article -></a>
+        </div>
+      </div>
+
+    <!-- Blog-7 -->
+       <div class="blog-card-full">
+        <img src="img33.jpg" alt="imge1">
+        <div class="content">
+          <h2>Smart Living for Working Couples: Control Your Home Remotely, Effortlessly</h2>
+          <p>Working couples can now live smart with Pert. From lights and curtains to home security, control your entire home remotely with ease.</p>
+        </div>
+        <div  class="anchor-div"> 
+          <a href="" class="read-more">Read Article -></a>
+        </div>
+      </div>
+    
+      <!-- Blog-8 -->
+       <div class="blog-card-full">
+        <img src="img34.jpg" alt="imge1">
+        <div class="content">
+          <h2>How Smart Lighting Enhances Your Lifestyle</h2>
+          <p>Smart lights can help you save electricity, create mood lighting, and automate your home ambiance.</p>
+        </div>
+        <div  class="anchor-div"> 
+          <a href="" class="read-more">Read Article -></a>
+        </div>
+      </div>
+      <!-- Blogs End -->
+      </div>
+  </section>
+<!-- All Blogs Ends Here -->
+
+<!-- FOR FOOTER- SECTION-->
+<div class="footer">
+  <div class="logo">
+    <h1>SmartHive</h1>
+    <div class="imge">
+      <img src="facebook.jpg" alt="facebook" height="28px">
+      <img src="twitter.jpg" alt="twitter" height="28px">
+      <img src="instagram.jpg" alt="instagram" height="28px">
+      <img src="youtube.jpg" alt="youtube" height="28px">
+    </div>
+    <div class="copyright">
+      <p>© 2025 Pert Infoconsulting Pvt Ltd <br>
+All Rights Reserved.</p>
+    </div>
+  </div>
+  <div class="foot1">
+    <ul>
+      <h3>Quick Links</h3>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms And Condition.html">Terms & Condition</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="foot2">
+     <ul>
+      <h3>Contact Us</h3>
+      <li><a href="">Sales: +91 9100 9200 31</a></li>
+      <li><a href="">hello@pert.me</a></li>
+      <li><a href="">Support: +91 7075 01 02 03</a></li>
+      <li><a href="">support@pert.me</a></li>
+    </ul>
+  </div>
+   <div class="foot3">
+     <ul>
+      <h3>Address</h3>
+      <li><a href="">Experience Center</a></li>
+      <li><a href="">Alladin Mansion, 1-11-252/1A-1D, Street Number <br> 3, near Shoppers Stop, Begumpet</a></li>
+      <li><a href="">Hyderabad,Telangana-500016</a></li>
+    </ul>
+  </div>
+
+
+ </div>
+</body>
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+          * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+body{
+  
+   background-color: #f9f7f1;
+  
+}
+.navbar {
+  border: 2px solid #FF9933;
+  padding: 30px 24px;
+  background-color: #FAF9F8;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between; /* left → title, middle → list, right → phone */
+  align-items: center;
+ 
+}
+
+.title {
+  font-size: 2.1rem;
+  color: #FF9933;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.navbar .list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+ .navbar .list a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #7D7D7D;
+  font-family: serif;
+  transition: color 0.3s ease;
+}
+
+.list a:hover {
+  color: #FF9933;
+}
+
+.phone-icon a {
+  text-decoration: none;
+  color: #FF9933;
+  /* font-weight: 900; */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+   gap: 8px;
+}
+.phone-icon a:hover{
+  text-decoration: none;
+}
+
+.phone-icon .material-icons {
+  font-size: 22px;
+  color: #FF9933;
+}
+
+/* DropDown */
+
+.sub-menu{
+  display: none;
+}
+
+.navbar ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  background-color:  #fdf1e5;
+  margin-top: 15px;
+  margin-left: -15px;
+  border-radius: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul li{
+  display: block;
+  margin: 20px;
+  border-radius: 0px;
+  text-align: left;
+  
+}
+
+.navbar ul li:hover .sub-menu ul li :last-child{
+  border-bottom: none;
+}
+
+.navbar ul li:hover .sub-menu ul li a:hover{
+  color:#555
+}
+
+/* Video-Section */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen */
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+span{
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.overlay-text p{
+font-size: 1.5rem;
+  /* margin: 20px; */
+  font-weight: 100;
+
+
+}
+
+#para1{
+padding-right: 8rem
+} 
+
+
+#para{
+    font-size: 1.5rem;
+    padding-right: 3.8rem
+
+}
+
+/* Detail-section */
+/* .detail-section {
+  padding: 50px 20px;
+  background:#f6f5f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  gap: 30px;
+  font-size: 23px;
+  color: #555;
+
+}
+
+.detail-section .heading{
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.detail-section .heading .borline{
+  border-color:#7D7D7D;
+    max-width: 800px;
+    margin: 2% auto;
+} */
+
+
+/* next Section */
+.inner-content{
+  background-color: #f6f5f0;
+  display: flex;
+  column-gap: 5px;
+ /* margin: auto; */
+  padding: 80px;
+  margin-left:18%;
+
+}
+
+.column-div1{
+  background-color: black;
+  color: #f6f5f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 380px;
+  border-radius: 10px 0px 0px 10px;
+  gap: 30px;
+  
+}
+
+.contact-btn{
+  width: 150px;
+  height: 50px;
+  background-color:#648258;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 20px;
+  font-weight: bold;
+
+
+
+}
+
+.contact-btn span{
+  font-size: 16px;
+}
+
+.bgh-green{
+font-size: 32px; 
+font-weight: bold;
+margin-top:10px;
+ background: linear-gradient(90.91deg, #6DAF52 30.79%, #2798D0 67.92%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.inner-content p{
+  font-size: 20px;
+}
+
+/* Column-2 */
+.column-div2{
+  background-color: black;
+  color: #f6f5f0;
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 380px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.row-1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+
+.row-2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+   padding: 35px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon img{
+  width: 60px;
+  height: 60px;
+  background-color: black;
+   border: 1px solid white; 
+   border-radius: 50px;
+   padding: 8px;
+}
+
+.text-line .line{
+flex-grow: 1;
+height: 1px;
+background-color:  #333131;
+}
+
+
+.banner{
+  background-color:rgb(95, 88, 75);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  padding: 20px;
+  gap: 100px;
+
+}
+
+.banner img{
+  width: 800px;
+  height: 650px;
+  margin: 10px;
+}
+
+.content{
+  color: #FAF9F8;
+  padding: 50px;
+  /* gap: 60px; */
+  font-size: 22px;
+}
+
+.content h1{
+  margin-bottom: 70px;
+  font-size: 50px;
+}
+.content h3{
+  font-size: 30px;
+}
+
+.content .borline{
+  color: #f6f5f0;
+   max-width: 100px;
+}
+
+/* Scroll section */
+.box {
+            display: flex;
+            gap: 30px;
+            width: 95%;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .box1 {
+            height: 300px;
+            width: 550px;
+            background:#ffe1c44d ;
+            border-radius: 1rem;
+            box-shadow: 1px 1px 10px rgb(211, 201, 201);
+            animation: scroll-left 15s linear infinite;
+
+        }
+
+        @keyframes scroll-left {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .box1 img {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+/* Footer */
+
+.footer{
+  height: 350px;
+  background-color:#ffe1c44d;
+  margin-top:50px;
+  display: flex;
+  justify-content: space-around;
+}
+ul{
+  list-style: none;
+}
+.logo{
+  margin-top:5%;
+  font-size:30px;
+  color: #FF9933;
+}
+.foot1 ,
+.foot2 ,
+.foot3 {
+ margin-top: 5%;
+
+}
+
+h3{
+  font-size: 20px;
+}
+a{
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+  font-size: 20px;
+  color: #7D7D7D;
+ 
+}
+a:hover{
+  color: #FF9933;
+  text-decoration: underline;
+}
+
+.imge{
+  /* margin-left: 80px; */
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.1rem;
+}
+.copyright{
+    margin-top: 1rem;
+    color: #7D7D7D;
+    font-size:20px;
+
+}
+.copyright p{
+  font-size:18px;
+}
+.foot1 ul,
+.foot2 ul,
+.foot3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* automatic space between links */
+}
+/* DropDown */
+.sub-menu{
+  display: none;
+}
+
+.navbar ul li {
+  position: relative;
+  color: #FF9933;
+  
+}
+
+.navbar ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  width:250px;
+  top: 100%; /* place directly below parent */
+  left: 0;   /* align perfectly with parent */
+  background-color: #fdf1e5;
+  border-radius: 10px;
+  z-index: 999;
+  margin: 0; /* remove the gap that breaks hover */
+  padding: 5px 10px;
+}
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul li{
+  display: block;
+  margin: 20px;
+  border-radius: 0px;
+  text-align: left;
+  
+}
+
+.navbar ul li:hover .sub-menu ul li :last-child{
+  border-bottom: none;
+}
+
+.navbar ul li:hover .sub-menu ul li a:hover{
+  color:#FF9933;
+}
+
+/* Form-section */
+.form-section{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 50px;
+  margin-top: 50px;
+  padding: 30px;
+} 
+
+/*Left-Form-section- */
+.left-section{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+   background-color: #F6F6F6;
+   padding: 80px;
+   border-radius: 10px;
+   height: 700px;
+   font-size: 22px;
+}
+
+/* Left-Form-Contact-section- */
+.contact{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.left-section h1{
+  font-size: 35px;
+}
+
+.left-section .bg-green{
+  font-size: 35px;
+  font-weight: bold;
+  background: linear-gradient(90.91deg, #6DAF52 30.79%, #2798D0 67.92%);
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+    position: relative;
+    display: inline-block;
+}
+
+.con-detail{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  gap: 30px;
+}
+
+.con-detail img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+
+/*Right-Form-section- */
+.right-section{
+  background-color:#F6F6F6 ;
+  width: 600px;
+  height: 700px;
+  padding: 50px;
+  font-size: 22px;
+}
+input{
+  height: 30px;
+  /* width: 20rem; */
+ }
+
+.btn-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.form-btn{
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  background: linear-gradient(90.91deg, #6DAF52 30.79%, #2798D0 67.92%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #648258;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+    <!-- FOR NAVBAR -->
+  <nav class="navbar">
+    <div class="title">SmartHive</div>
+    <ul class="list">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a>
+       <div class="sub-menu">
+        <ul>
+          <li><a href="Products.html">Smart Lighting</a></li>
+          <li><a href="Smart-Fans.html">Smart Fans</a></li>
+          <li><a href="switches.html">Smart Switches</a></li>
+          <li><a href="Smart-AC.html">Smart A.C</a></li>
+
+        </ul>
+ </div>
+      </li>
+      </li>
+      <li><a href="pra.html">Catalogue</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+            <li><a href="Device.php">Device Control</a></li>
+
+    </ul>
+    <div class="phone-icon">
+      <a href="#" id="phone">
+        <span class="material-icons">call</span> +91 94244 40489
+      </a>
+    </div>
+  </nav>
+   </header>
+
+   <!-- Video-Section -->
+
+   <div class="video-container">
+  <video autoplay muted loop id="bg-video">
+    <source src="lightvedio.mp4" type="video/mp4">
+  </video>
+  <div class="overlay-text">
+    <p id="para1"> <span>Living Room Automation</span> <br> <br>
+       That Elevates Your Home’s Ambience</p>
+       <br>
+    <p id="para">Experience the magic of Smart Home Automation where lights, ACs, and 
+     <br> motorized curtains sync to match your mood, whether it’s movie night or
+      <br> a cozy evening at home.</p>
+
+     
+  </div>
+  </div>
+
+
+
+</div>
+
+<div class="inner-content">
+  <!-- Column-1 Starts here -->
+  <div class="column-div1">
+<div><h1 class="core-head">Our Core <br>
+<span class="bgh-green">
+    Values</span> 
+</h1>
+</div>
+<p>Guided by purpose and <br>
+   powered by innovation, our <br>
+   values define how we think,<br>
+   build, and lead.</p>
+   <a href="conatct.html" class="contact-btn"><span>Contact Us</span></a>
+
+</div>
+<!-- Column-1 ends here -->
+
+<!-- Column-2 Starts here -->
+<div class="column-div2">
+  <!-- Row-1 -->
+  <div class="row-1">
+    <div class="icon" >
+      <img src="integrity.jpg" alt="Integrity" >
+      <p>Integrity</p>
+    </div>
+
+    <div class="icon" >
+      <img src="customer.jpg" alt="Integrity" >
+      <p>Customer Centric</p>
+    </div>
+
+    <div class="icon" >
+    <img src="inventive.jpg" alt="Integrity">
+    <p>Inventive Mindset</p>
+    </div>
+  </div>
+<div class="text-line">
+  <div class="line"></div>
+</div>
+  
+
+<!-- Row-2 -->
+ <div class="row-2">
+  <div class="icon" >
+      <img src="empowerment.jpg" alt="Integrity">
+      <p>Empowerment</p>
+    </div>
+
+    <div class="icon" >
+      <img src="collective.jpg" alt="Integrity">
+      <p>Collective Victory</p>
+    </div>
+ </div>
+
+</div>
+
+</div>
+
+<div class="banner">
+  <img src="banner.jpg" alt="Banner">
+  <div class="content">
+    <p><h3>Our Purpose</h3>
+      <br>
+<h1>To elevate the living <br>
+experience of our customers</h1>
+ <hr class="borline">
+<br>
+<p>We live with this spirit every single day. Every pixel of our 
+<br> organisation is driven by deep customer empathy and that reflects <br> 
+in everything we do. It is this empathy that inspires us to create
+<br> products and design solutions that are beautiful, meaningful, <br> enduring and magical. We adopt the principles of inclusive design 
+<br>into everything we create because we believe as Frank Chimero <br>
+ said "People ignore design that ignores People".
+ <br><br>
+
+As our story continues to evolve, it will always be guided by our <br> vision to be the undisputed leader in smart living and propelled <br>
+ by ourdesire to deliver living experiences that our customers will love.</p>
+</p>
+</div>
+
+  <img  src="home-space-1.jpg" alt="Banner" height="650px" width="800px">
+
+    <div class="content">
+    <p><h3>The Vision</h3>
+      <br>
+<h1>To pioneer the global transformation <br>
+towards intelligent living <br>
+environment</h1>
+ <hr class="borline">
+<br>
+<p>
+SmartNest Homes aims at revolutionizing the way individuals <br>
+interact with their homes and shaping the future of modern <br>
+living. By leveraging cutting-edge technology and innovative <br>
+solutions, we aspire to redefine the concept of home <br>
+automation, making it accessible, intuitive, and seamlessly <br>
+integrated into the fabric of everyday life.
+ <br><br>
+
+As our story continues to evolve, it will always be guided by our <br> vision to be the undisputed leader in smart living and propelled <br>
+ by ourdesire to deliver living experiences that our customers will love.</p>
+</p>
+</div>
+  <!-- <img src="home-space-1.jpg" alt="Banner"> -->
+
+</div>
+
+    
+
+     <!-- Form-Section -->
+      <div class="form-section">
+        <!-- Left-section -->
+        <div class="left-section">
+        <h1 class="form-head">Having <br><span class="bg-green">Questions?</span></h1>
+        <h2 style="font-weight: 100;">“Let’s make a Smarter <br> 
+         World together”</h2>
+
+        <div class="contact">
+          <!-- img-1 -->
+          <div class="con-detail">
+            <img src="img36.jpg" alt="">
+            <p>+91 8839302764</p>
+          </div>
+          <!-- img-2 -->
+           <div class="con-detail">
+            <img src="img37.jpg" alt="" >
+            <p>riyakush.2344@gmail.com</p>
+          </div>
+          <!-- img-3 -->
+           <div class="con-detail">
+            <img src="img38.jpg" alt="">
+            <p>Vindhya Institute of Technology and Science(VITS) <br>Karhi Road,Amoudha, Satna, Madhya Pradesh</p>
+          </div>
+
+
+
+
+        </div>
+        </div>
+
+        <!-- Right-section -->
+         <div class="right-section">
+      <form action="save.php" method="post">
+  <label>Name</label><br>
+  <input type="text" name="name" required><br><br>
+
+  <label>Email</label><br>
+  <input type="email" name="email" required><br><br>
+
+  <label>Automation For</label><br>
+  <input type="text" name="automation_for" required><br><br>
+
+  <p>Control For (Select multiple options):</p>
+  <input type="checkbox" name="controls[]" value="Lighting Control"> Lighting Control<br>
+  <input type="checkbox" name="controls[]" value="Fan Control"> Fan Control<br>
+  <input type="checkbox" name="controls[]" value="AC Control"> AC Control<br><br>
+
+  <label>Contact Number</label><br>
+  <input type="text" name="contact_number" required><br><br>
+
+  <label>City</label><br>
+  <input type="text" name="city" required><br><br>
+
+  <button type="submit" class="form-btn">Submit</button>
+</form>
+
+        
+         </div>
+
+      </div>
+     
+
+                <!-- Footer -->
+         <div class="footer">
+  <div class="logo">
+    <h1>SmartHive</h1>
+    <div class="imge">
+      <img src="facebook.jpg" alt="facebook" height="28px">
+      <img src="twitter.jpg" alt="twitter" height="28px">
+      <img src="instagram.jpg" alt="instagram" height="28px">
+      <img src="youtube.jpg" alt="youtube" height="28px">
+    </div>
+    <div class="copyright">
+      <p>© 2025 Pert Infoconsulting Pvt Ltd <br>
+All Rights Reserved.</p>
+    </div>
+  </div>
+  <div class="foot1">
+    <ul>
+      <h3>Quick Links</h3>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms And Condition.html">Terms & Condition</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="foot2">
+     <ul>
+      <h3>Contact Us</h3>
+      <li><a href="">Sales: +91 9100 920031</a></li>
+      <li><a href="">hello@pert.me</a></li>
+      <li><a href="">Support: +91 7075 01 02 03</a></li>
+      <li><a href="">support@pert.me</a></li>
+    </ul>
+  </div>
+   <div class="foot3">
+     <ul>
+      <h3>Address</h3>
+      <li><a href="">Experience Center</a></li>
+      <li><a href="">Alladin Mansion, 1-11-252/1A-1D, Street Number <br> 3, near Shoppers Stop, Begumpet</a></li>
+      <li><a href="">Hyderabad,Telangana-500016</a></li>
+</ul>
+</div>
+  
+</body>
+</html>

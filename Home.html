@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+       
+    }
+ .navbar {
+  border: 2px solid #FF9933;
+  padding: 30px 24px;
+  background-color: #FAF9F8;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between; /* left → title, middle → list, right → phone */
+  align-items: center;
+  /* background-color: #D6BEFA; */
+
+}
+
+.title {
+  font-size: 2rem;
+  color: #FF9933;
+  font-weight: bold;
+  font-family: serif;
+}
+
+
+.navbar .list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+ .navbar .list a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #7D7D7D;
+  font-family: serif;
+  transition: color 0.3s ease;
+}
+
+.list a:hover {
+  color: #FF9933;
+}
+
+.phone-icon a {
+  text-decoration: none;
+  color: #FF9933;
+  /* font-weight: 900; */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+   gap: 8px;
+}
+.phone-icon a:hover{
+  text-decoration: none;
+}
+
+.phone-icon .material-icons {
+  font-size: 22px;
+  color: #FF9933;
+}
+
+
+ .image-section {
+      position: relative;
+      height: 100vh; /* full screen height */
+      width: 100%;
+      overflow: hidden;
+      border-radius:1.5rem;
+    }
+
+    .image-section::before {
+      content: "";
+      position: absolute;
+      top: 0; 
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: bgChange 15s infinite;
+    }
+
+    @keyframes bgChange {
+      0% {
+        background-image: url("img4.jpg");
+        opacity: 1;
+      }
+      33% {
+        background-image: url("img5.jpg");
+        opacity: 1;
+      }
+      66% {
+        background-image: url("img6.jpg");
+        opacity: 1;
+      }
+      100% {
+        background-image: url("img4.jpg");
+        opacity: 1;
+      }
+    }
+
+video{
+  width: 94%;
+  margin-top: 80px;
+ margin-left: 50px;
+ border-radius: 1.5rem;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  margin-top: 100px;
+}
+
+.line {
+  flex: 1; 
+  height: 2px;
+  background-color: #FF9933;
+  margin-top: 50px;
+
+}
+
+.divider p {
+  font-size:3rem;
+  color: #FF9933;
+  font-style: italic;
+}
+  
+.paragraph{
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #333;
+  margin-top: 68px;
+  text-align: center;
+
+}
+
+.videos{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 28px;
+margin-top: 70px;
+}
+  
+.content{
+  height: 2910px;
+  width: 100%;
+  background-color:#f5f1eeb0;
+  margin-top: 80px;
+}
+.text1{
+  font-size: 1.8rem;
+  text-align: center;
+  color: #333;
+  padding-top: 50px;
+  font-style: italic;
+}
+
+
+.divider1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  margin-top: 30px;
+
+}
+
+.line1 {
+  flex: 1; 
+  height: 2px;
+  background-color: #FF9933;
+  margin-bottom: 30px;
+
+}
+
+.divider1 p {
+  font-size:3rem;
+  color: #FF9933;
+  font-style: italic;
+}
+  
+.text2{
+  text-align: center;
+  font-size: 16px;
+  margin-top: 13px;
+}
+.image{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+ margin-left: 5%;
+ gap: 30px;
+ margin-top: 50px;
+}
+.image img {
+
+  transition: 0.5s ease; /* smooth animation */
+}
+
+.image img:hover {
+  filter:grayscale(100%)/* hover par black & white */
+}
+.content2 .para{
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 50px;
+  font-style: italic;
+}
+
+.image2{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+   transition: transform 1s ease-in; /* smooth effect */
+
+     
+}
+.image2 img:hover{
+  transform: scale(1.05);
+}
+
+.content3 .text3{
+  text-align: center;
+  font-size: 3rem;
+  color: #FF9933;
+  font-style: italic;
+  margin-top: 30px;
+}
+
+
+.divider3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; 
+  margin-top: 30px;
+
+}
+
+.line3{
+  flex: 1; 
+  height: 2px;
+  background-color: #FF9933;
+  margin-bottom: 60px;
+
+}
+
+.divider3 p {
+  font-size:30px;
+  color: #333;
+  font-style: italic;
+}
+.box{
+  display: flex;
+  gap:30px;
+  width: 95%; 
+   overflow: hidden; 
+   margin-top: 20px;  
+}
+
+.box1{
+  height: 300px;
+  width: 550px;
+  background:#ffe1c44d;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px rgb(211, 201, 201);
+   animation: scroll-left 15s linear infinite;
+
+}
+ @keyframes scroll-left {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+    
+.box1 img{
+  /* For star properrty */
+ /* margin-left: 15px;
+ margin-top: 10px; */
+ border-radius: 1rem;
+}
+.box1 .testimonial-para{
+  font-size: 20px;
+  font-style: italic;
+  color: grey;
+  margin-top: 70px;
+  margin-left: 15px;
+}
+.testi-para{
+  font-size: 20px;
+  margin-top: 60px;
+   margin-left: 15px;
+
+}
+.footer{
+  height: 350px;
+  background-color:#ffe1c44d;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+ul{
+  list-style: none;
+}
+.logo{
+  margin-top:5%;
+  font-size:30px;
+  color: #FF9933;
+}
+.foot1 ,
+.foot2 ,
+.foot3 {
+ margin-top: 5%;
+
+}
+
+h3{
+  font-size: 20px;
+}
+a{
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+  font-size: 20px;
+  color: #7D7D7D;
+ 
+}
+a:hover{
+  color: #FF9933;
+  text-decoration: underline;
+}
+
+.imge{
+  /* margin-left: 80px; */
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.1rem;
+}
+.copyright{
+    margin-top: 1rem;
+    color: #7D7D7D;
+    font-size:20px;
+
+}
+.copyright p{
+  font-size:18px;
+}
+.foot1 ul,
+.foot2 ul,
+.foot3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* automatic space between links */
+}
+
+
+/* DropDown */
+.sub-menu{
+  display: none;
+}
+.navbar ul li {
+  position: relative;
+  color: #FF9933;
+  
+}
+
+.navbar ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  width:250px;
+  top: 100%; /* place directly below parent */
+  left: 0;   /* align perfectly with parent */
+  background-color: #fdf1e5;
+  border-radius: 10px;
+  z-index: 999;
+  margin: 0; /* remove the gap that breaks hover */
+  padding: 5px 10px;
+}
+
+
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul li{
+  display: block;
+  margin: 20px;
+  border-radius: 0px;
+  text-align: left;
+  
+}
+
+.navbar ul li:hover .sub-menu ul li :last-child{
+  border-bottom: none;
+}
+
+.navbar ul li:hover .sub-menu ul li a:hover{
+ color:#FF9933;
+}
+
+    </style>
+</head>
+<body>
+
+
+
+  <!-- Popup Background -->
+<div id="popup-bg" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+      z-index: 9999999;
+">
+
+    <!-- Popup Form -->
+    <div style="
+        width: 500px;
+        height: 500px;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        position: relative;
+          z-index: 10000000;
+    ">
+        <button id="close-popup" style="
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            background: none;
+            font-size: 20px;
+            cursor: pointer;
+        ">×</button>
+
+        <h2 style="padding-left: 5rem;">Book a Smart Home Demo</h2>
+
+        <form action="enquireyform.php" method="POST">
+            <input style="margin-top: 2rem; padding: 10px; text-align: center; margin-left: 7rem;" type="text" name="name" placeholder="Name" required><br><br>
+            <input style="margin-top: 1rem; padding: 10px; text-align: center; margin-left: 7rem;"  type="tel" name="mobile" placeholder="Mobile" required><br><br>
+            <input style="margin-top: 1rem; padding: 10px; text-align: center; margin-left: 7rem;" type="email" name="email" placeholder="Email" required><br><br>
+            <input style="margin-top: 1rem; padding: 10px; text-align: center; margin-left: 7rem;" type="text" name="city" placeholder="City" required><br><br>
+
+            <select style="margin-top: 1rem; padding: 10px; margin-left: 7rem;"   name="property_type" required>
+                <option value="">Select Property Type</option>
+                <option value="House">House</option>
+                <option value="Office">Office</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+
+            <button style="
+                width:100%;
+                padding:12px;
+                background:#ff9f42;
+                border:none;
+                border-radius:8px;
+                color:white;
+                cursor:pointer;
+            ">Submit</button>
+        </form>
+    </div>
+</div>
+      <!-- FOR NAVBAR -->
+  <nav class="navbar">
+    <div class="title">SmartHive</div>
+    <ul class="list">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a>
+       <div class="sub-menu">
+        <ul>
+          <li><a href="Products.html">Smart Lighting</a></li>
+          <li><a href="Smart-Fans.html">Smart Fans</a></li>
+          <li><a href="switches.html">Smart Switches</a></li>
+          <li><a href="Smart-AC.html">Smart A.C</a></li>
+
+        </ul>
+ </div>
+      </li>
+      </li>
+      <li><a href="pra.html">Catalogue</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+      <li><a href="Device.php">Device Control</a></li>
+
+    </ul>
+    <div class="phone-icon">
+      <a href="#" id="phone">
+        <span class="material-icons">call</span> +91 94244 40489
+      </a>
+    </div>
+  </nav>
+
+  <!-- FOR IMAGE SECTION -->
+   <div class="image-section"></div>
+
+   <!-- FOR VEDIO SECTION -->
+    <div class="vedio">
+    <video autoplay muted loop>
+  <source src="video.mp4" type="video/mp4">
+ </video>
+</div>
+<!-- <iframe width="882" height="496" src="https://www.youtube.com/embed/H1AirqDD3DQ?list=TLGGS9ErtwyPycsxMjA5MjAyNQ" ></iframe> -->
+
+<!-- for main section -->
+<div class="main">
+  <div class="divider">
+    <span class="line"></span>
+    <p>Real Experiences. Real Stories.</p>
+    <span class="line"></span>
+  </div>
+</div>
+
+<div class="paragraph">
+  <p>Watch how Pert is transforming homes across India.</p>
+</div>
+
+
+<!-- FOR YOUTUBE VEDIO -->
+ <div class="videos">
+<iframe width="500" height="280" src="https://www.youtube.com/embed/Uvb02AF3CfI" title="Smart Home Setup with PERT | Best Home Automation Showcase in India 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="500" height="280" src="https://www.youtube.com/embed/GHF9CtLrrtM" title="PERT Smart Home Experience | How Home Automation Transforms Living" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="500" height="280" src="https://www.youtube.com/embed/6sumzBv1GEg" title="Smart Home Automation with PERT | Complete Home Experience Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<!-- FOR SECOND SECTION -->
+ <div class="content">
+  <p class="text1">Smart Living Starts Here:</p>
+  <div class="divider1">
+    <span class="line1"></span>
+    <p>Create Your World Effortlessly</p>
+    <span class="line1"></span>
+  </div>
+
+  <p class="text2">Easily integrate all devices into one cohesive system for a truly connected home experience.</p>
+
+
+  <!-- FOR IMAGE SECTION 2 -->
+   <div class="image">
+    <img src="img7.jpg" alt="" height="500px" width="850px">
+    <img src="img8.jpg" alt="" height="500px" width="850px">
+    <img src="img9.jpg" alt="" height="500px" width="850px">
+    <img src="img10.jpg" alt="" height="500px" width="850px">
+  </div>
+
+    <!-- FOR THIRD SECTION -->
+<div class="content2">
+  <p class="para">One touch to Transform:</p>
+  <div class="divider1">
+    <span class="line1"></span>
+    <p>Experience Smart Living Today</p>
+    <span class="line1"></span>
+  </div>
+</div>
+
+<!-- FOR IMAGE SECTION 3 -->
+<div class="image2">
+  <img src="img11.jpg" alt="" height="500px" width="550px">
+  <img src="img12.jpg" alt="" height="500px" width="550px">
+  <img src="img13.jpg" alt="" height="500px" width="550px">
+</div>
+
+ <!-- FOR THIRD SECTION -->
+   <div class="content3">
+    <p class="text3">Our Smart Customers:</p>
+    <div class="divider3">
+    <span class="line3"></span>
+    <p>Explore their experiences and see how we can help you achieve your goals.</p>
+    <span class="line3"></span>
+    </div>
+    </div>
+   
+
+    <!-- FOR MULTIPLE BOXES -->
+<div class="box">
+    <!-- BOX1 -->
+     <div class="testimonial">
+      <div class="box1">
+        <img src="HA1.jpg" alt="" height="400px" width="550px">
+        
+      </div>
+     </div>
+
+         <!-- BOX2 -->
+     <div class="testimonial">
+      <div class="box1">
+         <img src="HA2.jpg" alt="" height="400px" width="550px">
+
+      
+      </div>
+     </div>
+
+          <!-- BOX3-->
+     <div class="testimonial">
+      <div class="box1">
+        <img src="HA3.jpg" alt="" height="400px" width="550px">
+
+        
+      </div>
+     </div>
+
+         <!-- BOX4 -->
+     <div class="testimonial">
+      <div class="box1">
+          <img src="HA4.jpg" alt="" height="400px" width="550px">
+
+       
+      </div>
+     </div>
+
+          <!-- BOX5 -->
+    
+     <div class="testimonial">
+      <div class="box1">
+          <img src="HA5.jpg" alt="" height="400px" width="550px">
+
+        
+      </div>
+     </div>
+     </div>
+<!-- FOR FOOTER- SECTION-->
+<div class="footer">
+  <div class="logo">
+    <h1>SmartHive</h1>
+    <div class="imge">
+      <img src="facebook.jpg" alt="facebook" height="28px">
+      <img src="twitter.jpg" alt="twitter" height="28px">
+      <img src="instagram.jpg" alt="instagram" height="28px">
+      <img src="youtube.jpg" alt="youtube" height="28px">
+    </div>
+    <div class="copyright">
+      <p>© 2025 Pert Infoconsulting Pvt Ltd <br>
+All Rights Reserved.</p>
+    </div>
+  </div>
+  <div class="foot1">
+    <ul>
+      <h3>Quick Links</h3>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms And Condition.html">Terms & Condition</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="foot2">
+     <ul>
+      <h3>Contact Us</h3>
+      <li><a href="">Sales: +91 9100 9200 31</a></li>
+      <li><a href="">hello@pert.me</a></li>
+      <li><a href="">Support: +91 7075 01 02 03</a></li>
+      <li><a href="">support@pert.me</a></li>
+    </ul>
+  </div>
+   <div class="foot3">
+     <ul>
+      <h3>Address</h3>
+      <li><a href="">Experience Center</a></li>
+      <li><a href="">Alladin Mansion, 1-11-252/1A-1D, Street Number <br> 3, near Shoppers Stop, Begumpet</a></li>
+      <li><a href="">Hyderabad,Telangana-500016</a></li>
+    </ul>
+  </div>
+
+
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("popup-bg");
+    const closeBtn = document.getElementById("close-popup");
+
+    if (popup) {
+        popup.style.display = "flex";  // Show popup at page load
+    } else {
+        console.log("POPUP NOT FOUND");
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+    }
+});
+</script>
+</body>
+</html>

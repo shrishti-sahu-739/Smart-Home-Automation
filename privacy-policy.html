@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Privacy-Policy</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    body{
+    background-color: #f9f7f1;
+    }
+ .navbar {
+  border: 2px solid #FF9933;
+  padding: 30px 24px;
+  background-color: #FAF9F8;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between; /* left → title, middle → list, right → phone */
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: #FF9933;
+  font-weight: bold;
+  font-family: serif;
+}
+
+
+.navbar .list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+ .navbar .list a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #7D7D7D;
+  font-family: serif;
+  transition: color 0.3s ease;
+}
+
+.list a:hover {
+  color: #FF9933;
+}
+
+.phone-icon a {
+  text-decoration: none;
+  color: #FF9933;
+  /* font-weight: 900; */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+   gap: 8px;
+}
+.phone-icon a:hover{
+  text-decoration: none;
+}
+
+.phone-icon .material-icons {
+  font-size: 22px;
+  color:#FF9933;
+}
+.content{
+    display: flex;
+}
+.content p{
+    font-size: 50px;
+    font-style: italic;
+    color: #FF9933;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-bottom: 180px;
+}
+.line{
+  width: 78%;
+  height: 2px;
+  background-color: #FF9933;
+  margin-top: 110px;
+  margin-left: 1rem;
+}
+.head{
+   margin-left: 50px;
+    font-size:24px;
+    color: #333333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.para{
+    font-size:21px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+}
+.footer{
+  height: 350px;
+  background-color:#ffe1c44d;
+  margin-top:50px;
+  display: flex;
+  justify-content: space-around;
+}
+ul{
+  list-style: none;
+}
+.logo{
+  margin-top:5%;
+  font-size:30px;
+  color: #FF9933;
+}
+.foot1 ,
+.foot2 ,
+.foot3 {
+ margin-top: 5%;
+
+}
+
+h3{
+  font-size: 20px;
+}
+a{
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+  font-size: 20px;
+  color: #7D7D7D;
+ 
+}
+a:hover{
+  color: #FF9933;
+  text-decoration: underline;
+}
+
+.imge{
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.1rem;
+}
+.copyright{
+    margin-top: 1rem;
+    color: #7D7D7D;
+    font-size:20px;
+
+}
+.copyright p{
+  font-size:18px;
+}
+.foot1 ul,
+.foot2 ul,
+.foot3 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* automatic space between links */
+}
+/* DropDown */
+.sub-menu{
+  display: none;
+}
+.navbar ul li {
+  position: relative;
+  color: #FF9933;
+  
+}
+
+.navbar ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  width:250px;
+  top: 100%; /* place directly below parent */
+  left: 0;   /* align perfectly with parent */
+  background-color: #fdf1e5;
+  border-radius: 10px;
+  z-index: 999;
+  margin: 0; /* remove the gap that breaks hover */
+  padding: 5px 10px;
+}
+
+
+
+.navbar ul li:hover .sub-menu ul{
+  display: block;
+  margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu ul li{
+  display: block;
+  margin: 20px;
+  border-radius: 0px;
+  text-align: left;
+  
+}
+
+.navbar ul li:hover .sub-menu ul li :last-child{
+  border-bottom: none;
+}
+
+.navbar ul li:hover .sub-menu ul li a:hover{
+ color:#FF9933;
+}
+
+    </style>
+</head>
+<body>
+       <!-- FOR NAVBAR -->
+  <nav class="navbar">
+    <div class="title">SmartHive</div>
+    <ul class="list">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a>
+      
+        <div class="sub-menu">
+        <ul>
+          <li><a href="Products.html">Smart Lighting</a></li>
+          <li><a href="Smart-Fans.html">Smart Fans</a></li>
+          <li><a href="switches.html">Smart Switches</a></li>
+          <li><a href="Smart-AC.html">Smart A.C</a></li>
+
+        </ul>
+ </div>
+      </li>
+      <li><a href="pra.html">Catalogue</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+            <li><a href="Device.php">Device Control</a></li>
+
+    </ul>
+    <div class="phone-icon">
+      <a href="#" id="phone">
+        <span class="material-icons">call</span>+91 94244 40489
+      </a>
+   </div>
+</nav> 
+
+<!-- FOR FIRST SECTION -->
+ <div class="content">
+    <p>Privacy Policy</p>
+    <div class="line"></div>
+ </div>
+
+ <!-- FOR SECOND SECTION -->
+  <!-- <strong class="head">Privacy Policy</strong> -->
+  <h4 class="head">Privacy Policy</h4>
+  <p class="para">This privacy policy applies to the Pert Pro app (hereby referred to as "Application") for mobile devices that was created by Pert Infoconsulting Pvt Ltd (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS"</p>
+<h4  class="head">Information Collection and Use</h4>
+<p class="para">The Application collects information when you download and use it. This information may include information such as <br><br>
+
+Your device's Internet Protocol address (e.g. IP address) <br> <br>
+
+
+The pages of the Application that you visit, the time and date of your visit, the time spent on those pages <br><br>
+
+The time spent on the Application <br> <br>
+
+The operating system you use on your mobile device <br><br>
+
+The Application does not gather precise information about the location of your mobile device. <br><br>
+
+The Application collects your device's location, which helps the Service Provider determine your approximate geographical location and make use of in below ways: <br><br>
+
+Geolocation Services: The Service Provider utilizes location data to provide features such as personalized content, relevant recommendations, and location-based services. <br><br>
+
+Analytics and Improvements: Aggregated and anonymized location data helps the Service Provider to analyze user behavior, identify trends, and improve the overall performance and functionality of the Application. <br><br>
+
+Third-Party Services: Periodically, the Service Provider may transmit anonymized location data to external services. These services assist them in enhancing the Application and optimizing their offerings. <br><br>
+
+The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions. <br><br>
+
+For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, including but not limited to Email, User Id, Name, Mobile No, Location. The information that the Service Provider request will be retained by them and used as described in this privacy policy. <br><br>
+</p>
+<h4 class="head">Third Party Access</h4>
+<p class="para">Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement. <br><br>
+
+
+The Service Provider may disclose User Provided and Automatically Collected Information:  <br><br>
+
+as required by law, such as to comply with a subpoena, or similar legal process; <br>
+when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;
+with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement. 
+</p>
+<h4 class="head">Opt-Out Rights</h4>
+<p class="para">You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.</p>
+<h4 class="head">Data Retention Policy</h4>
+<p class="para">The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at support@pert.me and they will respond in a reasonable time.</p>
+
+<h4 class="head">Children</h4>
+<p class="para">The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13. <br><br>
+
+The Service Provider does not knowingly collect personally identifiable information from children. The Service Provider encourages all children to never submit any personally identifiable information through the Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application and/or Services, please contact the Service Provider (support@pert.me) so that they will be able to take the necessary actions. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).</p>
+<h4 class="head">Security</h4>
+<p class="para">The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.</p>
+<h4 class="head">Changes</h4>
+<p class="para">This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes. <br>
+
+This privacy policy is effective as of 2025-01-01</p>
+<h4 class="head">Your Consent</h4>
+<p class="para">By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+<h4 class="head">Contact Us</h4>
+<p class="para">If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at support@pert.me.</p>
+<!-- FOR FOOTER- SECTION-->
+<div class="footer">
+  <div class="logo">
+    <h1>SmartHive</h1>
+    <div class="imge">
+      <img src="facebook.jpg" alt="facebook" height="28px">
+      <img src="twitter.jpg" alt="twitter" height="28px">
+      <img src="instagram.jpg" alt="instagram" height="28px">
+      <img src="youtube.jpg" alt="youtube" height="28px">
+    </div>
+    <div class="copyright">
+      <p>© 2025 Pert Infoconsulting Pvt Ltd <br>
+All Rights Reserved.</p>
+    </div>
+  </div>
+  <div class="foot1">
+    <ul>
+      <h3>Quick Links</h3>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Keypads.html">Products</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms And Condition.html">Terms & Condition</a></li>
+      <li><a href="conatct.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="foot2">
+     <ul>
+      <h3>Contact Us</h3>
+      <li><a href="">Sales: +91 9100 920031</a></li>
+      <li><a href="">hello@pert.me</a></li>
+      <li><a href="">Support: +91 7075 01 02 03</a></li>
+      <li><a href="">support@pert.me</a></li>
+    </ul>
+  </div>
+   <div class="foot3">
+     <ul>
+      <h3>Address</h3>
+      <li><a href="">Experience Center</a></li>
+      <li><a href="">Alladin Mansion, 1-11-252/1A-1D, Street Number <br> 3, near Shoppers Stop, Begumpet</a></li>
+      <li><a href="">Hyderabad,Telangana-500016</a></li>
+</ul>
+</div>
+</body>
+</html>
