@@ -30,6 +30,9 @@ This project was developed for educational purposes. Database setup may be requi
 ## Project Screenshots
 
 ![Home Page](Screenshots/Home.png)
+![Form Page](Screenshots/Form.png)
+![Light Page](Screenshots/Light.png)
+![Device Page](Screenshots/Device.png)
 
 
 
