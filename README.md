@@ -27,6 +27,10 @@ Smart Home Automation is a web-based project designed to help users monitor and 
 ## Notes
 This project was developed for educational purposes. Database setup may be required before all features work correctly.
 
+## Project Screenshots
+
+![Home Page](Screenshots/Home.png)
+
 
 
 
